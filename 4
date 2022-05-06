@@ -1,0 +1,135 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<string.h>
+
+//int main()
+//{
+//	int num1 = 10;
+//	int num2 = 20;
+//	if (num1 > num2)
+//		printf("较大值是：%d\n", num1);
+//	else
+//		printf("较大值是：%d\n", num2);
+//	return 0;
+//}
+//int Max(int x, int y)
+//{
+//	if (x > y)
+//		return x;
+//	else
+//		return y;
+//}
+//int main()
+//{
+//	int num1 = 10;
+//	int num2 = 20;
+//	int max = 0;
+//	
+//	max = Max(num1,num2);
+//	printf("max = %d\n", max);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int arr[] = { 1,2,3,4,5,6 };
+//	printf("%d\n", sizeof(a));//4字节
+//	printf("%d\n", sizeof(int));//4
+//	printf("%d\n", sizeof a );//4
+//	printf("%d\n", sizeof(arr));//24=4*6
+//	printf("%d\n", sizeof(arr)/sizeof(arr[0]));//6
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 0;
+//	int b = ~a;.//b是有符号的整形
+//	//~--按（二进制）位取反：1010--0101
+//	//原码，反码，补码
+//	//负数在内存中储存的时候，储存的是二进制补码
+//	printf("%d\n", b);//使用的，打印的是这个数的原码
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 10;
+//	//int b = a++;//后置，先使用，再++①
+//	int b = ++a;//前置，先++，再使用②
+//	printf("a=%d b=%d\n", a, b);//①a=11,b=10②a=11,b=11
+//	return 0;
+//}
+//int main()
+//{
+//	int a = (int)3.14;//(类型)强制转换
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int max = 0;
+//	max = (a > b ? a : b);//条件操作符
+//	printf("max = %d\n", a, b);
+//
+//	return 0;
+//}
+//int Add(int x, int y)
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z
+//}
+//int main()
+//{
+//	//int arr[10] = { 0 };
+//	//arr[4];//[] - 下标引用操作符
+//	int a = 10;
+//	int b = 20;
+//	int sum = Add(a. b);//（）- 函数调用操作符
+//	return 0;
+//}
+//#define MAX 100//宏的定义方式
+//int MAX(int x, int y)//函数的实现
+//{
+//	if (x > y)
+//		return x;
+//	else
+//		return y;
+//}
+//#define MAX(X,Y)(X>Y?X:Y)//宏的定义
+//int main()
+//{
+//	//register int a = 10;//register寄存器，把a定义成寄存器变量
+//	int a = 10;
+//	int b = 20;
+//	int max = MAX(a, b);
+//	printf("max = %d\n", max);//函数
+//	max = MAX(a, b);//max = (a>b?a:b)
+//	printf("max = %d\n", max);//宏的方式
+//	return 0;
+//}
+#include<string.h>
+struct Book//struct结构体
+{
+	char name[20];
+	short price;
+};
+
+int main()
+{
+	struct Book b1 = { "C语言程序设计", 55};
+	//b1.name = "C++";//那么是数组，数组不能改
+	strcpy(b1.name, "C++");//strcpy-string copy-字符串拷贝-库函数=string.h
+	printf("%s\n", b1.name);
+
+
+	//struct Book* pd = &b1;
+	//printf("%s\n", pd->name);
+	//printf("%d\n", pd->price);
+	//printf("书名 = %s\n", b1.name);
+	//printf("价格 = %d\n", b1.price);
+	//b1.price = 15;//price是变量，变量可以改
+	//printf("修改后的价格 = %d\n", b1.price);
+	return 0;
+}
